@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 40 20% 90%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 43 72% 55%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 43 72% 55%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 43 72% 55%;
+
+    --radius: 0.75rem;
+
+    --gold: 43 72% 55%;
+    --gold-light: 43 80% 68%;
+    --gold-dark: 43 65% 40%;
+    --charcoal: 0 0% 8%;
+    --charcoal-light: 0 0% 14%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(43 72% 55%), hsl(43 80% 68%), hsl(43 72% 55%));
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, hsl(43 72% 55%), hsl(43 80% 68%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    background: hsla(0, 0%, 8%, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsla(43, 72%, 55%, 0.1);
+  }
+
+  .gold-border {
+    border-color: hsl(43 72% 55% / 0.3);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 30px hsl(43 72% 55% / 0.15);
+  }
+}
